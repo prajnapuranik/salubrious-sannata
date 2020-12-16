@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Dec 16 12:59:16 IST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0176-6a73-f78e-000003e6e280 
+on database directory memory:/home/prajna/Documents/Salubrious-Sannata/ss.version2.demo/40727443-1534-47cb-82ca-2a52f58fc48a with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@5bc2b487 
+Loaded from file:/home/prajna/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Ubuntu
+java.runtime.version=11.0.9.1+1-Ubuntu-0ubuntu1.20.04
+user.dir=/home/prajna/Documents/Salubrious-Sannata/ss.version2.demo
+os.name=Linux
+os.arch=amd64
+os.version=5.4.0-56-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
