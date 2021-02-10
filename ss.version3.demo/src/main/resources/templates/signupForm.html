@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+   <!-- utf-8 better than iso-8859-1-->
+ 	 <meta charset="utf-8">
+
+ 	 <!-- To ensure proper rendering, use below line. Initial scale = zoom level-->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up form</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container text-center">
+	    <div>
+	       <h2> User registration </h2>
+	    </div>
+<!-- Form data sent to url /new_register via post method, object stored as "user" as mentioned in method for /register-->
+	<form th:action="@{/registerUser}" th:object="${user}" method="post" class="form-horizontal" style="margin: 0 auto; width:80%">
+
+    <div class = "m-4">
+    </div>
+
+     <div class="form-group row">
+        <label class="control-label col-sm-2"> Email: </label>
+				<div class="col-sm-10">
+					<input type = "email" class="form-control" th:field="*{email}" placeholder="Enter email" required/>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="control-label col-sm-2"> Password: </label>
+				<div class="col-sm-10">
+					<input type = "password" class="form-control" th:field="*{password}" required minlength="6" maxlength="10" placeholder="Enter password"/>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="control-label col-sm-2"> First name: </label>
+				<div class="col-sm-10">
+					<input type = "text" class="form-control" th:field="*{firstName}" required minlength="2" maxlength="20" placeholder="Enter first name"/>
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label class="control-label col-sm-2"> Last Name: </label>
+				<div class="col-sm-10">
+					<input type = "text" class="form-control" th:field="*{lastName}" required minlength="2" maxlength="20" placeholder="Enter last name"/>
+				</div>
+			</div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+
+	</form>
+	</div>
+</div>
+</body>
+
+</html>

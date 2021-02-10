@@ -31,8 +31,26 @@ public class ActivityService {
 		return activityList.stream().filter(a -> a.getId() == id).findFirst().get();
 	}
 	
-	void addActivity(Activity acti)
+	void add(Activity a)
 	{
-		activityList.add(acti);
+		activityList.add(a);
+	}
+	
+	void update(int id, Activity a)
+	{
+		for(Activity acti : activityList)
+		{
+			if(acti.getId() == id)
+			{
+				activityList.set(id-1, a);
+				return;
+			}
+		}
+	}
+	
+
+	void delete(int id)
+	{
+		activityList.removeIf(a -> a.getId() == id);
 	}
 }

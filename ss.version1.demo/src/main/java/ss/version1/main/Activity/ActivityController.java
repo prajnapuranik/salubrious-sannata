@@ -52,9 +52,22 @@ public class ActivityController {
 	@RequestMapping(method = RequestMethod.POST, value = "/activities")
 	public void addActivity(@RequestBody Activity a)
 	{
-		act.addActivity(a);
+		act.add(a);
 	}
 	
+	/** updateActivity() takes 2 parameters: @RequestBody Activity object to specify pick activity from request body
+	 * 									   	 @PathVariable id -> specifies id of the activity to be updated has to be picked from path of the value of requestMapping
+	 *   */
+	@RequestMapping(method = RequestMethod.PUT, value ="/activities/{id}")
+	public void updateActivity(@RequestBody Activity a, @PathVariable int id)
+	{
+		act.update(id, a);
+	}
 	
+	@RequestMapping(method = RequestMethod.DELETE, value ="/activities/{id}")
+	public void deleteActaivity(@PathVariable int id)
+	{
+		act.delete(id);
+	}
 	
 }
